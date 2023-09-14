@@ -1,0 +1,412 @@
+/* colleciones */
+
+db.createCollection('cita')
+db.createCollection('tipo_documento')
+db.createCollection('genero')
+db.createCollection('acudiente')
+db.createCollection('estado_cita')
+db.createCollection('medico')
+db.createCollection('especialidad')
+db.createCollection('consultorio')
+
+db.createCollection('usuario')
+
+
+
+
+
+/* estados */
+
+db.estado_cita.insertMany([
+  {
+    estado: "Programada"
+  },
+  {
+    estado: "Confirmada"
+  },
+  {
+    estado: "En Curso"
+  },
+  {
+    estado: "Atendida"
+  },
+  {
+    estado: "Finalizada"
+  }O])
+
+
+/* genero */
+
+db.genero.insertMany([
+  {
+    genero: "Masculino,
+  },
+  {
+    genero: "Femenino,
+  },
+  { 
+     genero: "Otro,
+  }
+])
+
+/* tipo documento */
+
+db.tipo_documento.insertMany([
+  {
+    tipo_documento: "CC"
+  },
+  {
+    tipo_documento: "CE"
+  },
+  {
+    tipo_documento: "TI"
+  },
+])
+
+
+/* especialidad */
+
+db.especialidad.insertMany([
+  {
+    especialidad: "Medicina General"
+  },
+  {
+    especialidad: "Medicina Interna"
+  },
+  {
+    especialidad: "Odontologia"
+  },
+  {
+    especialidad: "Pediatria"
+  },
+  {
+    especialidad: "Traumatologia"
+  }
+])
+
+
+
+
+db.medicos.insertMany([
+  {
+    matricula: "123456",
+    nombre: "Claudia Perez",
+    especialidad: "Medicina General",
+    consultorio: "Consultorio 1",
+  },
+  {
+    matricula: "654321",
+    nombre: "Juan Perez",
+    especialidad: "Medicina Interna",
+    consultorio: "Consultorio 2",
+  },
+  {
+    matricula: "987654",
+    nombre: "Maria Perez",
+    especialidad: "Odontologia",
+    consultorio: "Consultorio 3",
+  },
+  {
+    matricula: "123456",
+    nombre: "Nicolasa Perez",
+    especialidad: "Pediatria",
+    consultorio: "Consultorio 4",
+  },
+  {
+    matricula: "123456",
+    nombre: "Calvia Perez",
+    especialidad: "Traumatologia",
+    consultorio: "Consultorio 5",
+  },
+  {
+    matricula: "123456",
+    nombre: "Fernando Cruz",
+    especialidad: "Medicina General",
+    consultorio: "Consultorio 6",
+  },
+  {
+    matricula: "123456",
+    nombre: "Teresa Cruz",
+    especialidad: "Medicina General",
+    consultorio: "Consultorio 7",
+  }
+])
+
+db.consultorio.insertMany([
+  {
+    codigo: "1",
+    consultorio: "Consultorio 1"
+  },
+  {
+    codigo: "2",
+    consultorio: "Consultorio 2"
+  },
+  {
+    codigo: "3",
+    consultorio: "Consultorio 3"
+  },
+  {
+    codigo: "4",
+    consultorio: "Consultorio 4"
+  },
+  {
+    codigo: "5",
+    consultorio: "Consultorio 5"
+  },
+  {
+    codigo: "6",
+    consultorio: "Consultorio 6"
+  },
+  {
+    codigo: "7",
+    consultorio: "Consultorio 7"
+  },
+  {
+    codigo: "8",
+    consultorio: "Consultorio 8"
+  },
+  {
+    codigo: "9",
+    consultorio: "Consultorio 9"
+  }
+])
+
+/* citas */
+
+
+ db.usuario.insertMany([
+    {
+      nombre: "John",
+      apellido: "Doe",
+      telefono: "1234567890",
+      direccion: "123 Main St",
+      ciudad: "New York",
+      genero:"Masculino",
+      tipo_documento:"CC",
+      edad: 35,
+    },
+    {
+      nombre: "Jane",
+      apellido: "Smith",
+      telefono: "9876543210",
+      direccion: "456 Elm St",
+      ciudad: "Los Angeles",
+      genero:"Femenino",
+      tipo_documento:"CC",
+      edad: 28,
+    },
+    {
+      nombre: "Michael",
+      apellido: "Johnson",
+      telefono: "5555555555",
+      direccion: "789 Oak St",
+      ciudad: "Chicago",
+      genero:"Masculino",
+      tipo_documento:"CC",
+      edad: 42,
+    },
+    {
+      nombre: "Robert",
+      apellido: "Williams",
+      telefono: "4444444444",
+      direccion: "321 Oak St",
+      ciudad: "Miami",
+      genero:"Masculino",
+      tipo_documento:"CC",
+      edad: 45,
+    },
+    {
+      nombre: "Mary",
+      apellido: "Jones",
+      telefono: "3333333333",
+      direccion: "654 Pine St",
+      ciudad: "Dallas",
+      genero:"Femenino",
+      tipo_documento:"CC",
+      edad: 25,
+    },
+    {
+      nombre: "Lisa",
+      apellido: "Brown",
+      telefono: "2222222222",
+      direccion: "987 Pine St",
+      ciudad: "Houston",
+      genero:"Femenino",
+      tipo_documento:"CC",
+      edad: 32,
+    },
+    {
+      nombre: "David",
+      apellido: "Wilson",
+      telefono: "1111111111",
+      direccion: "321 Pine St",
+      ciudad: "San Antonio",
+      genero:"Masculino",
+      tipo_documento:"CC",
+      edad: 40,
+    },
+    {
+      nombre: "Jessica",
+      apellido: "Davis",
+      telefono: "0000000000",
+      direccion: "654 Pine St",
+      ciudad: "San Diego",
+      genero:"Femenino",
+      tipo_documento:"CC",
+      edad: 28,
+    },
+    {
+      nombre: "Sarah",
+      apellido: "Miller",
+      telefono: "9999999999",
+      direccion: "987 Pine St",
+      ciudad: "Austin",
+      genero:"Femenino",
+      tipo_documento:"CC",
+      edad: 25,
+    },
+    {
+      nombre: "William",
+      apellido: "Moore",
+      telefono: "8888888888",
+      direccion: "321 Pine St",
+      ciudad: "Fort Worth",
+      genero:"Masculino",
+      tipo_documento:"CC",
+      edad: 32,
+    }
+  ])
+
+db.cita.insertMany([
+    {
+      fecha: "2022-12-12",
+      estado: "Atendida",
+      usuario:'William Moore',
+      medico:'Juan Perez'
+    },
+    {
+      fecha: "2022-12-14",
+      estado: "Confirmada",
+      usuario:'Lisa Brown',
+      medico:'Calvia Perez'
+    },
+    {
+      fecha: "2022-12-23",
+      estado: "Programada",
+      usuario:'Jessica Davis',
+      medico:'Fernando Cruz'
+    },
+    {
+      fecha: "2022-12-12",
+      estado: "Atendida",
+      usuario:'David Wilson',
+      medico:'Claudia Perez'
+    },
+    {
+      fecha: "2022-12-14",
+      estado: "Confirmada",
+      usuario:'Sarah Miller',
+      medico:'Nicolasa Perez'
+    },
+    {
+      fecha: "2022-12-23",
+      estado: "Cancelada",
+      usuario:'Robert Williams',
+      medico:'Maria Perez'
+    },
+    {
+      fecha: "2022-12-12",
+      estado: "Atendida",
+      usuario:'John Doe',
+      medico:'Claudia Perez'
+    },
+    {
+      fecha: "2022-12-14",
+      estado: "Confirmada",
+      usuario:'Jane Smith',
+      medico:'Nicolasa Perez'
+    }
+])
+
+
+/* acudientes */
+
+db.acudiente.insertMany([
+  {
+    nombrecompleto: "Juan Perez",
+    telefono: "1234567890",
+    direccion: "123 Main St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bf7')
+  },
+  {
+    nombrecompleto: "Maria Lopez",
+    telefono: "9876543210",
+    direccion: "456 Elm St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bf8')
+  },
+  {
+    nombrecompleto: "Jose Rodriguez",
+    telefono: "5555555555",
+    direccion: "789 Oak St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bf9')
+  },
+  {
+    nombrecompleto: "Ana Martinez",
+    telefono: "4444444444",
+    direccion: "321 Oak St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bfa')
+  },
+  {
+    nombrecompleto: "Carlos Sanchez",
+    telefono: "3333333333",
+    direccion: "654 Pine St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bfb')
+  },
+  {
+    nombrecompleto: "Maria Garcia",
+    telefono: "2222222222",
+    direccion: "987 Pine St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bfc')
+  },
+  {
+    nombrecompleto: "Jose Lopez",
+    telefono: "1111111111",
+    direccion: "321 Pine St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bfd')
+  },
+  {
+    nombrecompleto: "Ana Rodriguez",
+    telefono: "0000000000",
+    direccion: "654 Pine St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bfe')
+  },
+  {
+    nombrecompleto: "Carlos Martinez",
+    telefono: "9999999999",
+    direccion: "987 Pine St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1bff')
+  },
+  {
+    nombrecompleto: "Maria Gomez",
+    telefono: "8888888888",
+    direccion: "321 Pine St",
+    usuario_id:ObjectId('650302dc4434c2c8a24e1c00')
+  }
+])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
